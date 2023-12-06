@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231206 12:31:30.534" rpa="false" schemaversion="4">
+<suite id="s1" name="SC02 - Validasi field username" source="C:\Users\ReiKa\PycharmProjects\spptti\tests\R01 - Authentication\SC02 - Validasi field username\SC02 - Validasi field username.robot">
+<test id="s1-t1" name="TC01 - Username tidak boleh mengandung spasi di awal" line="7">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 12:31:30.685" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231206 12:31:30.685" endtime="20231206 12:31:32.876"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231206 12:31:32.876" endtime="20231206 12:31:33.012"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231206 12:31:33.012" endtime="20231206 12:31:33.021"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231206 12:31:33.021" endtime="20231206 12:31:33.022"/>
+</kw>
+<status status="PASS" starttime="20231206 12:31:30.685" endtime="20231206 12:31:33.022"/>
+</kw>
+<kw name="Input Email" library="login">
+<arg>${SPACE}superadmin@gmail.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231206 12:31:33.022" endtime="20231206 12:31:33.255"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 12:31:33.255" level="INFO">Typing text ' superadmin@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231206 12:31:33.255" endtime="20231206 12:31:33.611"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231206 12:31:33.930" level="INFO">Content of text field 'email' is ' superadmin@gmail.com'.</msg>
+<status status="PASS" starttime="20231206 12:31:33.611" endtime="20231206 12:31:33.930"/>
+</kw>
+<status status="PASS" starttime="20231206 12:31:33.022" endtime="20231206 12:31:33.930"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Superadmin123*@#</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231206 12:31:33.930" endtime="20231206 12:31:34.155"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 12:31:34.155" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231206 12:31:34.155" endtime="20231206 12:31:34.502"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231206 12:31:34.821" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231206 12:31:34.502" endtime="20231206 12:31:34.821"/>
+</kw>
+<status status="PASS" starttime="20231206 12:31:33.930" endtime="20231206 12:31:34.821"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 12:31:34.822" endtime="20231206 12:31:35.037"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231206 12:31:35.037" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231206 12:31:35.037" endtime="20231206 12:31:35.574"/>
+</kw>
+<status status="PASS" starttime="20231206 12:31:34.821" endtime="20231206 12:31:35.574"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231206 12:31:37.574" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231206 12:31:35.574" endtime="20231206 12:31:37.574"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 12:31:37.771" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 12:31:37.574" endtime="20231206 12:31:37.771"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231206 12:31:37.771" endtime="20231206 12:31:39.915"/>
+</kw>
+<doc>SC02 - Validasi field username</doc>
+<tag>TC01 - Username tidak boleh mengandung spasi di awal</tag>
+<status status="PASS" starttime="20231206 12:31:30.685" endtime="20231206 12:31:39.915"/>
+</test>
+<test id="s1-t2" name="TC02 - Username harus mandatory, tidak boleh kosong" line="18">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231206 12:31:39.915" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231206 12:31:39.915" endtime="20231206 12:31:42.772"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231206 12:31:42.772" endtime="20231206 12:31:42.985"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231206 12:31:42.985" endtime="20231206 12:31:43.096"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231206 12:31:43.096" endtime="20231206 12:31:43.096"/>
+</kw>
+<status status="PASS" starttime="20231206 12:31:39.915" endtime="20231206 12:31:43.096"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231206 12:31:43.096" endtime="20231206 12:31:43.325"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Superadmin123*@#</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231206 12:31:43.325" endtime="20231206 12:31:43.547"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231206 12:31:43.547" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231206 12:31:43.547" endtime="20231206 12:31:43.898"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231206 12:31:44.217" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231206 12:31:43.898" endtime="20231206 12:31:44.217"/>
+</kw>
+<status status="PASS" starttime="20231206 12:31:43.325" endtime="20231206 12:31:44.217"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 12:31:44.217" endtime="20231206 12:31:44.433"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231206 12:31:44.433" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231206 12:31:44.433" endtime="20231206 12:31:44.969"/>
+</kw>
+<status status="PASS" starttime="20231206 12:31:44.217" endtime="20231206 12:31:44.969"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231206 12:31:46.969" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231206 12:31:44.969" endtime="20231206 12:31:46.969"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231206 12:31:47.155" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 12:31:46.969" endtime="20231206 12:31:47.155"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231206 12:31:47.155" endtime="20231206 12:31:49.289"/>
+</kw>
+<doc>SC02 - Validasi field username</doc>
+<tag>TC02 - Username harus mandatory, tidak boleh kosong</tag>
+<status status="PASS" starttime="20231206 12:31:39.915" endtime="20231206 12:31:49.289"/>
+</test>
+<doc>SC02 - Validasi field username</doc>
+<status status="PASS" starttime="20231206 12:31:30.534" endtime="20231206 12:31:49.289"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - Username tidak boleh mengandung spasi di awal</stat>
+<stat pass="1" fail="0" skip="0">TC02 - Username harus mandatory, tidak boleh kosong</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="SC02 - Validasi field username">SC02 - Validasi field username</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
