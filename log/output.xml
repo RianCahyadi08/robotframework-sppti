@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231206 18:25:46.726" rpa="false" schemaversion="4">
-<suite id="s1" name="SC06 - Delete Data Manajemen Modul" source="C:\Users\ReiKa\PycharmProjects\spptti\tests\R05 - Management Module\SC06 - Delete Data Manajemen Modul\SC06 - Delete Data Manajemen Modul.robot">
-<test id="s1-t1" name="TC01 - Delete Data Manajemen Modul" line="8">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231206 20:47:59.173" rpa="false" schemaversion="4">
+<suite id="s1" name="SC04 - Edit Data Manajemen Menu" source="C:\Users\ReiKa\PycharmProjects\spptti\tests\R06 - Management Menu\SC04 - Edit Data Manajemen Menu\SC04 - Edit Data Manajemen Menu.robot">
+<test id="s1-t1" name="TC01 - Edit Data Manajemen Menu" line="8">
 <kw name="Open Browser Website" library="login">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=add_argument("--incognito")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231206 18:25:46.895" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
-<status status="PASS" starttime="20231206 18:25:46.895" endtime="20231206 18:25:48.842"/>
+<msg timestamp="20231206 20:47:59.340" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231206 20:47:59.339" endtime="20231206 20:48:01.293"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231206 18:25:48.842" endtime="20231206 18:25:48.962"/>
+<status status="PASS" starttime="20231206 20:48:01.294" endtime="20231206 20:48:01.407"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Login</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20231206 18:25:48.962" endtime="20231206 18:25:48.971"/>
+<status status="PASS" starttime="20231206 20:48:01.407" endtime="20231206 20:48:01.417"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${SPEED}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231206 18:25:48.971" endtime="20231206 18:25:48.971"/>
+<status status="PASS" starttime="20231206 20:48:01.418" endtime="20231206 20:48:01.418"/>
 </kw>
-<status status="PASS" starttime="20231206 18:25:46.895" endtime="20231206 18:25:48.971"/>
+<status status="PASS" starttime="20231206 20:47:59.339" endtime="20231206 20:48:01.418"/>
 </kw>
 <kw name="Input Email" library="login">
 <arg>superadmin@gmail.com</arg>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>email</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20231206 18:25:48.972" endtime="20231206 18:25:49.202"/>
+<status status="PASS" starttime="20231206 20:48:01.418" endtime="20231206 20:48:01.649"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>email</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231206 18:25:49.202" level="INFO">Typing text 'superadmin@gmail.com' into text field 'email'.</msg>
-<status status="PASS" starttime="20231206 18:25:49.202" endtime="20231206 18:25:49.563"/>
+<msg timestamp="20231206 20:48:01.649" level="INFO">Typing text 'superadmin@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231206 20:48:01.649" endtime="20231206 20:48:02.004"/>
 </kw>
 <kw name="Textfield Value Should Be" library="SeleniumLibrary">
 <arg>email</arg>
 <arg>${email}</arg>
 <doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
-<msg timestamp="20231206 18:25:49.883" level="INFO">Content of text field 'email' is 'superadmin@gmail.com'.</msg>
-<status status="PASS" starttime="20231206 18:25:49.563" endtime="20231206 18:25:49.883"/>
+<msg timestamp="20231206 20:48:02.323" level="INFO">Content of text field 'email' is 'superadmin@gmail.com'.</msg>
+<status status="PASS" starttime="20231206 20:48:02.004" endtime="20231206 20:48:02.323"/>
 </kw>
-<status status="PASS" starttime="20231206 18:25:48.971" endtime="20231206 18:25:49.883"/>
+<status status="PASS" starttime="20231206 20:48:01.418" endtime="20231206 20:48:02.323"/>
 </kw>
 <kw name="Input Password" library="login">
 <arg>Superadmin123*@#</arg>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>password</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20231206 18:25:49.883" endtime="20231206 18:25:50.109"/>
+<status status="PASS" starttime="20231206 20:48:02.323" endtime="20231206 20:48:02.547"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231206 18:25:50.109" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
-<status status="PASS" starttime="20231206 18:25:50.109" endtime="20231206 18:25:50.458"/>
+<msg timestamp="20231206 20:48:02.547" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231206 20:48:02.547" endtime="20231206 20:48:02.893"/>
 </kw>
 <kw name="Textfield Value Should Be" library="SeleniumLibrary">
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
-<msg timestamp="20231206 18:25:50.776" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
-<status status="PASS" starttime="20231206 18:25:50.458" endtime="20231206 18:25:50.776"/>
+<msg timestamp="20231206 20:48:03.211" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231206 20:48:02.893" endtime="20231206 20:48:03.211"/>
 </kw>
-<status status="PASS" starttime="20231206 18:25:49.883" endtime="20231206 18:25:50.776"/>
+<status status="PASS" starttime="20231206 20:48:02.323" endtime="20231206 20:48:03.211"/>
 </kw>
 <kw name="Click Btn Login" library="login">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id:kt_sign_in_submit</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231206 18:25:50.776" endtime="20231206 18:25:50.992"/>
+<status status="PASS" starttime="20231206 20:48:03.211" endtime="20231206 20:48:03.427"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:kt_sign_in_submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231206 18:25:50.992" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
-<status status="PASS" starttime="20231206 18:25:50.992" endtime="20231206 18:25:51.530"/>
+<msg timestamp="20231206 20:48:03.427" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231206 20:48:03.427" endtime="20231206 20:48:03.963"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id:swal2-html-container</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231206 18:25:51.530" endtime="20231206 18:25:54.493"/>
+<status status="PASS" starttime="20231206 20:48:03.963" endtime="20231206 20:48:06.923"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${text}</var>
 <arg>id:swal2-html-container</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231206 18:25:54.709" level="INFO">${text} = You have successfully logged in!</msg>
-<status status="PASS" starttime="20231206 18:25:54.493" endtime="20231206 18:25:54.709"/>
+<msg timestamp="20231206 20:48:07.136" level="INFO">${text} = You have successfully logged in!</msg>
+<status status="PASS" starttime="20231206 20:48:06.923" endtime="20231206 20:48:07.136"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${text} == "You have successfully logged in!"'</arg>
@@ -120,76 +120,87 @@
 <arg>Wait Until Location Is</arg>
 <arg>http://10.31.31.107/home</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20231206 18:25:54.710" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
-<msg timestamp="20231206 18:25:54.710" level="INFO">Pressing special key ENTER to browser.</msg>
-<msg timestamp="20231206 18:25:54.710" level="INFO">Releasing special key ENTER.</msg>
-<msg timestamp="20231206 18:25:54.817" level="INFO">Sending keys Wait Until Location Is</msg>
-<msg timestamp="20231206 18:25:55.000" level="INFO">Sending keys http://10.31.31.107/home</msg>
-<status status="PASS" starttime="20231206 18:25:54.709" endtime="20231206 18:25:55.115"/>
+<msg timestamp="20231206 20:48:07.137" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
+<msg timestamp="20231206 20:48:07.137" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231206 20:48:07.137" level="INFO">Releasing special key ENTER.</msg>
+<msg timestamp="20231206 20:48:07.244" level="INFO">Sending keys Wait Until Location Is</msg>
+<msg timestamp="20231206 20:48:07.424" level="INFO">Sending keys http://10.31.31.107/home</msg>
+<status status="PASS" starttime="20231206 20:48:07.136" endtime="20231206 20:48:07.538"/>
 </kw>
-<status status="PASS" starttime="20231206 18:25:54.709" endtime="20231206 18:25:55.115"/>
+<status status="PASS" starttime="20231206 20:48:07.136" endtime="20231206 20:48:07.538"/>
 </kw>
-<status status="PASS" starttime="20231206 18:25:50.776" endtime="20231206 18:25:55.115"/>
+<status status="PASS" starttime="20231206 20:48:03.211" endtime="20231206 20:48:07.538"/>
 </kw>
-<kw name="Move To Management Module" library="management_module">
+<kw name="Move To Management Menu" library="management_menu">
 <kw name="Go To" library="SeleniumLibrary">
-<arg>http://10.31.31.107/admin/manajemen-modul/</arg>
+<arg>http://10.31.31.107/admin/manajemen-menu/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231206 18:25:55.116" level="INFO">Opening url 'http://10.31.31.107/admin/manajemen-modul/'</msg>
-<status status="PASS" starttime="20231206 18:25:55.115" endtime="20231206 18:25:55.385"/>
+<msg timestamp="20231206 20:48:07.539" level="INFO">Opening url 'http://10.31.31.107/admin/manajemen-menu/'</msg>
+<status status="PASS" starttime="20231206 20:48:07.538" endtime="20231206 20:48:07.826"/>
 </kw>
 <kw name="Wait Until Location Is" library="SeleniumLibrary">
-<arg>http://10.31.31.107/admin/manajemen-modul/</arg>
+<arg>http://10.31.31.107/admin/manajemen-menu/</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" starttime="20231206 18:25:55.385" endtime="20231206 18:25:55.489"/>
+<status status="PASS" starttime="20231206 20:48:07.826" endtime="20231206 20:48:07.931"/>
 </kw>
-<status status="PASS" starttime="20231206 18:25:55.115" endtime="20231206 18:25:55.489"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231206 20:48:10.931" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231206 20:48:07.931" endtime="20231206 20:48:10.931"/>
 </kw>
-<kw name="Delete" library="management_module">
+<status status="PASS" starttime="20231206 20:48:07.538" endtime="20231206 20:48:10.931"/>
+</kw>
+<kw name="Detail Management Menu" library="management_menu">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@id="kt_app_content_container"]/div[1]/div[2]/div/div/div[1]/table/tbody/tr[4]/td[4]/div/a[3]</arg>
+<arg>//*[@class="btn btn-active-primary hover-scale btn-sm"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231206 18:25:55.489" endtime="20231206 18:25:56.924"/>
+<status status="PASS" starttime="20231206 20:48:10.931" endtime="20231206 20:48:11.147"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="kt_app_content_container"]/div[1]/div[2]/div/div/div[1]/table/tbody/tr[4]/td[4]/div/a[3]</arg>
+<arg>//*[@class="btn btn-active-primary hover-scale btn-sm"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 18:25:56.924" level="INFO">Clicking element 'xpath://*[@id="kt_app_content_container"]/div[1]/div[2]/div/div/div[1]/table/tbody/tr[4]/td[4]/div/a[3]'.</msg>
-<status status="PASS" starttime="20231206 18:25:56.924" endtime="20231206 18:25:57.175"/>
+<msg timestamp="20231206 20:48:11.147" level="INFO">Clicking element '//*[@class="btn btn-active-primary hover-scale btn-sm"]'.</msg>
+<status status="PASS" starttime="20231206 20:48:11.147" endtime="20231206 20:48:11.378"/>
 </kw>
-<status status="PASS" starttime="20231206 18:25:55.489" endtime="20231206 18:25:57.175"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_accordion_1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231206 20:48:11.378" endtime="20231206 20:48:11.592"/>
+</kw>
+<status status="PASS" starttime="20231206 20:48:10.931" endtime="20231206 20:48:11.592"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231206 18:25:59.175" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231206 18:25:57.175" endtime="20231206 18:25:59.175"/>
+<msg timestamp="20231206 20:48:13.592" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231206 20:48:11.592" endtime="20231206 20:48:13.592"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231206 18:25:59.383" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231206 18:25:59.175" endtime="20231206 18:25:59.383"/>
+<msg timestamp="20231206 20:48:13.791" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 20:48:13.592" endtime="20231206 20:48:13.792"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231206 18:25:59.383" endtime="20231206 18:26:01.540"/>
+<status status="PASS" starttime="20231206 20:48:13.792" endtime="20231206 20:48:15.962"/>
 </kw>
-<doc>SC06 - Delete Data Manajemen Modul</doc>
-<tag>TC01 - Delete Data Manajemen Modul</tag>
-<status status="PASS" starttime="20231206 18:25:46.894" endtime="20231206 18:26:01.540"/>
+<doc>SC04 - Edit Data Manajemen Menu</doc>
+<tag>TC01 - Edit Data Manajemen Menu</tag>
+<status status="PASS" starttime="20231206 20:47:59.338" endtime="20231206 20:48:15.962"/>
 </test>
-<doc>SC06 - Delete Data Manajemen Modul</doc>
-<status status="PASS" starttime="20231206 18:25:46.727" endtime="20231206 18:26:01.541"/>
+<doc>SC04 - Edit Data Manajemen Menu</doc>
+<status status="PASS" starttime="20231206 20:47:59.174" endtime="20231206 20:48:15.962"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">TC01 - Delete Data Manajemen Modul</stat>
+<stat pass="1" fail="0" skip="0">TC01 - Edit Data Manajemen Menu</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SC06 - Delete Data Manajemen Modul">SC06 - Delete Data Manajemen Modul</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC04 - Edit Data Manajemen Menu">SC04 - Edit Data Manajemen Menu</stat>
 </suite>
 </statistics>
 <errors>
