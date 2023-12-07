@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231207 20:33:10.479" rpa="false" schemaversion="4">
+<suite id="s1" name="SC05 - Update Data Manajemen Role" source="C:\Users\ReiKa\PycharmProjects\spptti\tests\R07 - Management Role\SC05 - Update Data Manajemen Role\SC05 - Update Data Manajemen Role.robot">
+<test id="s1-t1" name="TC01 - Update Data Manajemen Role" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231207 20:33:10.633" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231207 20:33:10.633" endtime="20231207 20:33:12.689"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231207 20:33:12.689" endtime="20231207 20:33:12.817"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231207 20:33:12.818" endtime="20231207 20:33:12.826"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231207 20:33:12.827" endtime="20231207 20:33:12.827"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:10.633" endtime="20231207 20:33:12.827"/>
+</kw>
+<kw name="Input Email" library="login">
+<arg>superadmin@gmail.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231207 20:33:12.827" endtime="20231207 20:33:13.059"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:13.059" level="INFO">Typing text 'superadmin@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231207 20:33:13.059" endtime="20231207 20:33:13.414"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231207 20:33:13.733" level="INFO">Content of text field 'email' is 'superadmin@gmail.com'.</msg>
+<status status="PASS" starttime="20231207 20:33:13.414" endtime="20231207 20:33:13.733"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:12.827" endtime="20231207 20:33:13.733"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Superadmin123*@#</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231207 20:33:13.733" endtime="20231207 20:33:13.957"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:13.957" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231207 20:33:13.957" endtime="20231207 20:33:14.302"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231207 20:33:14.619" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231207 20:33:14.302" endtime="20231207 20:33:14.619"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:13.733" endtime="20231207 20:33:14.619"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231207 20:33:14.619" endtime="20231207 20:33:14.834"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:14.834" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231207 20:33:14.834" endtime="20231207 20:33:15.368"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:swal2-html-container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231207 20:33:15.368" endtime="20231207 20:33:18.632"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>id:swal2-html-container</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:18.846" level="INFO">${text} = You have successfully logged in!</msg>
+<status status="PASS" starttime="20231207 20:33:18.632" endtime="20231207 20:33:18.846"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${text} == "You have successfully logged in!"'</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<arg>ELSE IF</arg>
+<arg>'${text} == "Gagal Login"'</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<arg>ELSE</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231207 20:33:18.847" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
+<msg timestamp="20231207 20:33:18.847" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231207 20:33:18.847" level="INFO">Releasing special key ENTER.</msg>
+<msg timestamp="20231207 20:33:18.953" level="INFO">Sending keys Wait Until Location Is</msg>
+<msg timestamp="20231207 20:33:19.176" level="INFO">Sending keys http://10.31.31.107/home</msg>
+<status status="PASS" starttime="20231207 20:33:18.846" endtime="20231207 20:33:19.289"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:18.846" endtime="20231207 20:33:19.289"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:14.619" endtime="20231207 20:33:19.289"/>
+</kw>
+<kw name="Move To Management Role Module" library="management_role">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://10.31.31.107/admin/manajemen-role/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231207 20:33:19.289" level="INFO">Opening url 'http://10.31.31.107/admin/manajemen-role/'</msg>
+<status status="PASS" starttime="20231207 20:33:19.289" endtime="20231207 20:33:19.563"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>http://10.31.31.107/admin/manajemen-role/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20231207 20:33:19.563" endtime="20231207 20:33:19.666"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:19.289" endtime="20231207 20:33:19.666"/>
+</kw>
+<kw name="Click Icon Edit" library="management_role">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_app_content_container"]/div/div[2]/div/div/div[1]/table/tbody/tr[3]/td[3]/div/a[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231207 20:33:19.666" endtime="20231207 20:33:21.102"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_app_content_container"]/div/div[2]/div/div/div[1]/table/tbody/tr[3]/td[3]/div/a[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:21.102" level="INFO">Clicking element 'xpath://*[@id="kt_app_content_container"]/div/div[2]/div/div/div[1]/table/tbody/tr[3]/td[3]/div/a[2]/button'.</msg>
+<status status="PASS" starttime="20231207 20:33:21.102" endtime="20231207 20:33:21.330"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231207 20:33:24.331" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231207 20:33:21.330" endtime="20231207 20:33:24.331"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:19.666" endtime="20231207 20:33:24.331"/>
+</kw>
+<kw name="Input Nama Peran" library="management_role">
+<arg>namaPeranRianSatuUpdate</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:nama_peran</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231207 20:33:24.331" endtime="20231207 20:33:24.544"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:nama_peran</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231207 20:33:24.544" endtime="20231207 20:33:24.766"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nama_peran</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:24.766" level="INFO">Typing text 'namaPeranRianSatuUpdate' into text field 'name:nama_peran'.</msg>
+<status status="PASS" starttime="20231207 20:33:24.766" endtime="20231207 20:33:25.153"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>name:nama_peran</arg>
+<arg>${param}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231207 20:33:25.575" level="INFO">Content of text field 'name:nama_peran' is 'namaPeranRianSatuUpdate'.</msg>
+<status status="PASS" starttime="20231207 20:33:25.153" endtime="20231207 20:33:25.575"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:24.331" endtime="20231207 20:33:25.575"/>
+</kw>
+<kw name="Click Tab Selected" library="management_role">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:tab-namaModuleRian</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231207 20:33:25.575" endtime="20231207 20:33:25.790"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:tab-namaModuleRian</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:25.790" level="INFO">Clicking element 'id:tab-namaModuleRian'.</msg>
+<status status="PASS" starttime="20231207 20:33:25.790" endtime="20231207 20:33:26.020"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="el-tabs__item is-top is-active"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231207 20:33:26.020" endtime="20231207 20:33:26.234"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:25.575" endtime="20231207 20:33:26.234"/>
+</kw>
+<kw name="Click Btn Submit" library="management_role">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_modal_new_address_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231207 20:33:26.234" endtime="20231207 20:33:26.448"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_modal_new_address_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231207 20:33:26.448" level="INFO">Clicking button 'id:kt_modal_new_address_submit'.</msg>
+<status status="PASS" starttime="20231207 20:33:26.448" endtime="20231207 20:33:26.986"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231207 20:33:28.987" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231207 20:33:26.986" endtime="20231207 20:33:28.987"/>
+</kw>
+<status status="PASS" starttime="20231207 20:33:26.234" endtime="20231207 20:33:28.987"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231207 20:33:30.987" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231207 20:33:28.987" endtime="20231207 20:33:30.987"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231207 20:33:31.211" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231207 20:33:30.987" endtime="20231207 20:33:31.211"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231207 20:33:31.211" endtime="20231207 20:33:33.372"/>
+</kw>
+<doc>SC05 - Update Data Manajemen Role</doc>
+<tag>TC01 - Update Data Manajemen Role</tag>
+<status status="PASS" starttime="20231207 20:33:10.632" endtime="20231207 20:33:33.372"/>
+</test>
+<doc>SC05 - Update Data Manajemen Role</doc>
+<status status="PASS" starttime="20231207 20:33:10.480" endtime="20231207 20:33:33.373"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - Update Data Manajemen Role</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC05 - Update Data Manajemen Role">SC05 - Update Data Manajemen Role</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
