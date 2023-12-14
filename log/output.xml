@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231214 20:02:38.747" rpa="false" schemaversion="4">
+<suite id="s1" name="Klasifikasi" source="C:\Users\ReiKa\PycharmProjects\spptti\tests\Klasifikasi\klasifikasi.robot">
+<test id="s1-t1" name="TC01 - View Pola" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231214 20:02:38.921" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231214 20:02:38.921" endtime="20231214 20:02:40.943"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231214 20:02:40.943" endtime="20231214 20:02:41.060"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231214 20:02:41.060" endtime="20231214 20:02:41.071"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231214 20:02:41.071" endtime="20231214 20:02:41.072"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:38.920" endtime="20231214 20:02:41.072"/>
+</kw>
+<kw name="Input Email" library="login">
+<arg>rian.cahyadi@gmail.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:41.072" endtime="20231214 20:02:41.309"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:41.309" level="INFO">Typing text 'rian.cahyadi@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231214 20:02:41.309" endtime="20231214 20:02:41.669"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231214 20:02:41.989" level="INFO">Content of text field 'email' is 'rian.cahyadi@gmail.com'.</msg>
+<status status="PASS" starttime="20231214 20:02:41.669" endtime="20231214 20:02:41.989"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:41.072" endtime="20231214 20:02:41.989"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>P@55word123</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:41.989" endtime="20231214 20:02:42.214"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:42.214" level="INFO">Typing text 'P@55word123' into text field 'password'.</msg>
+<status status="PASS" starttime="20231214 20:02:42.214" endtime="20231214 20:02:42.559"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231214 20:02:42.880" level="INFO">Content of text field 'password' is 'P@55word123'.</msg>
+<status status="PASS" starttime="20231214 20:02:42.559" endtime="20231214 20:02:42.880"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:41.989" endtime="20231214 20:02:42.880"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:42.880" endtime="20231214 20:02:43.096"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:43.096" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231214 20:02:43.096" endtime="20231214 20:02:43.633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:swal2-html-container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:43.633" endtime="20231214 20:02:47.206"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>id:swal2-html-container</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:47.419" level="INFO">${text} = You have successfully logged in!</msg>
+<status status="PASS" starttime="20231214 20:02:47.206" endtime="20231214 20:02:47.419"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${text} == "You have successfully logged in!"'</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<arg>ELSE IF</arg>
+<arg>'${text} == "Gagal Login"'</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<arg>ELSE</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231214 20:02:47.420" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
+<msg timestamp="20231214 20:02:47.420" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231214 20:02:47.420" level="INFO">Releasing special key ENTER.</msg>
+<msg timestamp="20231214 20:02:47.527" level="INFO">Sending keys Wait Until Location Is</msg>
+<msg timestamp="20231214 20:02:47.757" level="INFO">Sending keys http://10.31.31.107/home</msg>
+<status status="PASS" starttime="20231214 20:02:47.419" endtime="20231214 20:02:47.871"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:47.419" endtime="20231214 20:02:47.871"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:42.880" endtime="20231214 20:02:47.871"/>
+</kw>
+<kw name="Move To Module Klasifikasi" library="klasifikasi">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231214 20:02:47.872" level="INFO">Opening url 'http://10.31.31.107/klasifikasi/master/klasifikasi/'</msg>
+<status status="PASS" starttime="20231214 20:02:47.871" endtime="20231214 20:02:48.115"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20231214 20:02:48.115" endtime="20231214 20:02:48.298"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231214 20:02:51.298" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231214 20:02:48.298" endtime="20231214 20:02:51.298"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:47.871" endtime="20231214 20:02:51.298"/>
+</kw>
+<kw name="Click Edit" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="ki-solid ki-pencil fs-8"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:51.298" endtime="20231214 20:02:51.514"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="ki-solid ki-pencil fs-8"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:51.514" level="INFO">Clicking element '//*[@class="ki-solid ki-pencil fs-8"]'.</msg>
+<status status="PASS" starttime="20231214 20:02:51.514" endtime="20231214 20:02:51.745"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="p-0 m-0"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:51.745" endtime="20231214 20:02:51.973"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:51.298" endtime="20231214 20:02:51.973"/>
+</kw>
+<kw name="Input Buku" library="klasifikasi">
+<arg>buku rian</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:51.973" endtime="20231214 20:02:52.189"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:52.189" endtime="20231214 20:02:52.411"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:52.411" level="INFO">Typing text 'buku rian' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:52.411" endtime="20231214 20:02:52.770"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:51.973" endtime="20231214 20:02:52.770"/>
+</kw>
+<kw name="Input Bab" library="klasifikasi">
+<arg>bab satu</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:52.770" endtime="20231214 20:02:52.982"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:52.982" endtime="20231214 20:02:53.202"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:53.202" level="INFO">Typing text 'bab satu' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:53.202" endtime="20231214 20:02:53.557"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:52.770" endtime="20231214 20:02:53.557"/>
+</kw>
+<kw name="Input Pasal" library="klasifikasi">
+<arg>pasal 1</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[3]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:53.557" endtime="20231214 20:02:53.772"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[3]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:53.772" endtime="20231214 20:02:53.995"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[3]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:53.996" level="INFO">Typing text 'pasal 1' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[3]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:53.995" endtime="20231214 20:02:54.354"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:53.557" endtime="20231214 20:02:54.354"/>
+</kw>
+<kw name="Input Ayat" library="klasifikasi">
+<arg>1</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[6]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:54.355" endtime="20231214 20:02:54.571"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[6]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:54.571" endtime="20231214 20:02:54.794"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[6]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:54.794" level="INFO">Typing text '1' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[6]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:54.794" endtime="20231214 20:02:55.142"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:54.354" endtime="20231214 20:02:55.142"/>
+</kw>
+<kw name="Input Angka/Huruf/Butir" library="klasifikasi">
+<arg>1/a/-</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[9]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:55.142" endtime="20231214 20:02:55.357"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[9]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:55.357" endtime="20231214 20:02:55.576"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[9]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:55.576" level="INFO">Typing text '1/a/-' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[9]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:55.576" endtime="20231214 20:02:55.928"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:55.142" endtime="20231214 20:02:55.928"/>
+</kw>
+<kw name="Input UU No" library="klasifikasi">
+<arg>11</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[12]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:55.929" endtime="20231214 20:02:56.143"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[12]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:56.143" endtime="20231214 20:02:56.366"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[12]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:56.366" level="INFO">Typing text '11' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[12]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:56.366" endtime="20231214 20:02:56.713"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:55.928" endtime="20231214 20:02:56.713"/>
+</kw>
+<kw name="Input UU Tahun" library="klasifikasi">
+<arg>2000</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[15]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:56.713" endtime="20231214 20:02:56.928"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[15]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:56.928" endtime="20231214 20:02:57.151"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[15]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:57.151" level="INFO">Typing text '2000' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[15]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:57.151" endtime="20231214 20:02:57.502"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:56.713" endtime="20231214 20:02:57.502"/>
+</kw>
+<kw name="Input Penulisan Buku" library="klasifikasi">
+<arg>penulisan buku</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[18]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:57.502" endtime="20231214 20:02:57.717"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[18]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:57.717" endtime="20231214 20:02:57.940"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[18]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:57.940" level="INFO">Typing text 'penulisan buku' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[18]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:57.940" endtime="20231214 20:02:58.305"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:57.502" endtime="20231214 20:02:58.305"/>
+</kw>
+<kw name="Input Klasifikasi" library="klasifikasi">
+<arg>klasifikasi rian</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[19]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:58.305" endtime="20231214 20:02:58.520"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[19]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:58.520" endtime="20231214 20:02:58.745"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[19]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:58.745" level="INFO">Typing text 'klasifikasi rian' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[19]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:58.745" endtime="20231214 20:02:59.109"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:58.305" endtime="20231214 20:02:59.109"/>
+</kw>
+<kw name="Input Kualifikasi" library="klasifikasi">
+<arg>kualifikasi rian</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[20]/div/div/div/input</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:59.109" endtime="20231214 20:02:59.325"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[20]/div/div/div/input</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231214 20:02:59.325" endtime="20231214 20:02:59.550"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[20]/div/div/div/input</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231214 20:02:59.550" level="INFO">Typing text 'kualifikasi rian' into text field 'xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[20]/div/div/div/input'.</msg>
+<status status="PASS" starttime="20231214 20:02:59.550" endtime="20231214 20:02:59.919"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:59.109" endtime="20231214 20:02:59.919"/>
+</kw>
+<kw name="Select Status" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Status"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231214 20:02:59.919" endtime="20231214 20:03:00.134"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Status"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231214 20:03:00.134" level="INFO">Clicking element '//*[@placeholder="Status"]'.</msg>
+<status status="PASS" starttime="20231214 20:03:00.134" endtime="20231214 20:03:00.369"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231214 20:03:00.870" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231214 20:03:00.369" endtime="20231214 20:03:00.870"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231214 20:03:00.871" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231214 20:03:00.871" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231214 20:03:00.871" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231214 20:03:00.870" endtime="20231214 20:03:00.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231214 20:03:01.476" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231214 20:03:00.976" endtime="20231214 20:03:01.476"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231214 20:03:01.477" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231214 20:03:01.477" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231214 20:03:01.477" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231214 20:03:01.476" endtime="20231214 20:03:01.585"/>
+</kw>
+<status status="PASS" starttime="20231214 20:02:59.919" endtime="20231214 20:03:01.585"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231214 20:03:03.586" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231214 20:03:01.585" endtime="20231214 20:03:03.586"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231214 20:03:03.809" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231214 20:03:03.586" endtime="20231214 20:03:03.809"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231214 20:03:03.809" endtime="20231214 20:03:05.951"/>
+</kw>
+<doc>SC01 - View Page Manajemen Role</doc>
+<tag>TC01 - View Manajemen Role</tag>
+<status status="PASS" starttime="20231214 20:02:38.920" endtime="20231214 20:03:05.951"/>
+</test>
+<doc>SC01 - View Page Manajemen Role</doc>
+<status status="PASS" starttime="20231214 20:02:38.749" endtime="20231214 20:03:05.952"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Manajemen Role</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Klasifikasi">Klasifikasi</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
