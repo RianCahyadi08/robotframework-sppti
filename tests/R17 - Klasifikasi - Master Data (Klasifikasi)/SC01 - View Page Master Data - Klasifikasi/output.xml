@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231215 19:27:07.235" rpa="false" schemaversion="4">
+<suite id="s1" name="SC01 - View Page Master Data - Klasifikasi" source="C:\Users\ReiKa\PycharmProjects\spptti\tests\R17 - Klasifikasi - Master Data (Klasifikasi)\SC01 - View Page Master Data - Klasifikasi\SC01 - View Page Master Data - Klasifikasi.robot">
+<test id="s1-t1" name="TC01 - View Master Data - Klasifikasi" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231215 19:27:07.392" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231215 19:27:07.392" endtime="20231215 19:27:10.099"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231215 19:27:10.099" endtime="20231215 19:27:10.506"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231215 19:27:10.506" endtime="20231215 19:27:10.544"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231215 19:27:10.544" endtime="20231215 19:27:10.545"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:07.391" endtime="20231215 19:27:10.545"/>
+</kw>
+<kw name="Input Email" library="login">
+<arg>superadmin@gmail.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:27:10.546" endtime="20231215 19:27:10.777"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:10.777" level="INFO">Typing text 'superadmin@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231215 19:27:10.777" endtime="20231215 19:27:11.132"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:27:11.452" level="INFO">Content of text field 'email' is 'superadmin@gmail.com'.</msg>
+<status status="PASS" starttime="20231215 19:27:11.132" endtime="20231215 19:27:11.452"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:10.545" endtime="20231215 19:27:11.452"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Superadmin123*@#</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:27:11.452" endtime="20231215 19:27:11.675"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:11.675" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231215 19:27:11.675" endtime="20231215 19:27:12.020"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:27:12.337" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231215 19:27:12.020" endtime="20231215 19:27:12.337"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:11.452" endtime="20231215 19:27:12.337"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:12.337" endtime="20231215 19:27:12.552"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:12.552" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231215 19:27:12.552" endtime="20231215 19:27:13.088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:swal2-html-container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:13.088" endtime="20231215 19:27:16.966"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>id:swal2-html-container</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:17.181" level="INFO">${text} = You have successfully logged in!</msg>
+<status status="PASS" starttime="20231215 19:27:16.966" endtime="20231215 19:27:17.181"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${text} == "You have successfully logged in!"'</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<arg>ELSE IF</arg>
+<arg>'${text} == "Gagal Login"'</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<arg>ELSE</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:27:17.182" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
+<msg timestamp="20231215 19:27:17.182" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231215 19:27:17.182" level="INFO">Releasing special key ENTER.</msg>
+<msg timestamp="20231215 19:27:17.289" level="INFO">Sending keys Wait Until Location Is</msg>
+<msg timestamp="20231215 19:27:17.600" level="INFO">Sending keys http://10.31.31.107/home</msg>
+<status status="PASS" starttime="20231215 19:27:17.181" endtime="20231215 19:27:17.714"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:17.181" endtime="20231215 19:27:17.714"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:12.337" endtime="20231215 19:27:17.714"/>
+</kw>
+<kw name="Move To Module Klasifikasi" library="klasifikasi">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231215 19:27:17.714" level="INFO">Opening url 'http://10.31.31.107/klasifikasi/master/klasifikasi/'</msg>
+<status status="PASS" starttime="20231215 19:27:17.714" endtime="20231215 19:27:17.933"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20231215 19:27:17.933" endtime="20231215 19:27:18.075"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:21.075" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:27:18.075" endtime="20231215 19:27:21.075"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:17.714" endtime="20231215 19:27:21.075"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:24.075" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:27:21.075" endtime="20231215 19:27:24.075"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231215 19:27:24.397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231215 19:27:24.075" endtime="20231215 19:27:24.397"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231215 19:27:24.397" endtime="20231215 19:27:26.552"/>
+</kw>
+<doc>SC01 - View Page Master Data</doc>
+<tag>TC01 - View Master Data - Klasifikasi</tag>
+<status status="PASS" starttime="20231215 19:27:07.391" endtime="20231215 19:27:26.552"/>
+</test>
+<test id="s1-t2" name="TC02 - Search Master Data - Klasifikasi" line="20">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231215 19:27:26.553" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231215 19:27:26.553" endtime="20231215 19:27:29.051"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231215 19:27:29.051" endtime="20231215 19:27:29.260"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231215 19:27:29.260" endtime="20231215 19:27:29.380"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231215 19:27:29.380" endtime="20231215 19:27:29.380"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:26.553" endtime="20231215 19:27:29.380"/>
+</kw>
+<kw name="Input Email" library="login">
+<arg>superadmin@gmail.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:27:29.380" endtime="20231215 19:27:29.609"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:29.609" level="INFO">Typing text 'superadmin@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231215 19:27:29.609" endtime="20231215 19:27:29.965"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:27:30.284" level="INFO">Content of text field 'email' is 'superadmin@gmail.com'.</msg>
+<status status="PASS" starttime="20231215 19:27:29.965" endtime="20231215 19:27:30.284"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:29.380" endtime="20231215 19:27:30.284"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Superadmin123*@#</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:27:30.284" endtime="20231215 19:27:30.508"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:30.508" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231215 19:27:30.508" endtime="20231215 19:27:30.853"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:27:31.170" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231215 19:27:30.853" endtime="20231215 19:27:31.170"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:30.284" endtime="20231215 19:27:31.170"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:31.170" endtime="20231215 19:27:31.385"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:31.385" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231215 19:27:31.385" endtime="20231215 19:27:31.920"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:swal2-html-container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:31.920" endtime="20231215 19:27:35.184"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>id:swal2-html-container</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:35.398" level="INFO">${text} = You have successfully logged in!</msg>
+<status status="PASS" starttime="20231215 19:27:35.184" endtime="20231215 19:27:35.398"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${text} == "You have successfully logged in!"'</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<arg>ELSE IF</arg>
+<arg>'${text} == "Gagal Login"'</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<arg>ELSE</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:27:35.399" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
+<msg timestamp="20231215 19:27:35.399" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231215 19:27:35.399" level="INFO">Releasing special key ENTER.</msg>
+<msg timestamp="20231215 19:27:35.506" level="INFO">Sending keys Wait Until Location Is</msg>
+<msg timestamp="20231215 19:27:35.729" level="INFO">Sending keys http://10.31.31.107/home</msg>
+<status status="PASS" starttime="20231215 19:27:35.398" endtime="20231215 19:27:35.848"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:35.398" endtime="20231215 19:27:35.848"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:31.170" endtime="20231215 19:27:35.848"/>
+</kw>
+<kw name="Move To Module Klasifikasi" library="klasifikasi">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231215 19:27:35.848" level="INFO">Opening url 'http://10.31.31.107/klasifikasi/master/klasifikasi/'</msg>
+<status status="PASS" starttime="20231215 19:27:35.848" endtime="20231215 19:27:36.087"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20231215 19:27:36.087" endtime="20231215 19:27:36.266"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:39.266" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:27:36.266" endtime="20231215 19:27:39.266"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:35.848" endtime="20231215 19:27:39.266"/>
+</kw>
+<kw name="Click Btn Filter" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="fs-4 fw-semibold mb-0 ms-4"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:39.266" endtime="20231215 19:27:39.481"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="fs-4 fw-semibold mb-0 ms-4"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:39.481" level="INFO">Clicking element '//*[@class="fs-4 fw-semibold mb-0 ms-4"]'.</msg>
+<status status="PASS" starttime="20231215 19:27:39.481" endtime="20231215 19:27:39.714"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:40.715" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231215 19:27:39.714" endtime="20231215 19:27:40.715"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:39.266" endtime="20231215 19:27:40.715"/>
+</kw>
+<kw name="Select Kolom" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Filter Kolom"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:40.715" endtime="20231215 19:27:40.929"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Filter Kolom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:40.929" level="INFO">Clicking element '//*[@placeholder="Filter Kolom"]'.</msg>
+<status status="PASS" starttime="20231215 19:27:40.929" endtime="20231215 19:27:41.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:41.662" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:27:41.162" endtime="20231215 19:27:41.662"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:27:41.662" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:27:41.662" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:27:41.662" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:27:41.662" endtime="20231215 19:27:41.768"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:42.268" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:27:41.768" endtime="20231215 19:27:42.268"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:27:42.268" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:27:42.268" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:27:42.268" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:27:42.268" endtime="20231215 19:27:42.373"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:42.874" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:27:42.373" endtime="20231215 19:27:42.874"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:27:42.874" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:27:42.874" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:27:42.874" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:27:42.874" endtime="20231215 19:27:42.980"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:43.480" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:27:42.980" endtime="20231215 19:27:43.480"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:27:43.480" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:27:43.480" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:27:43.480" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:27:43.480" endtime="20231215 19:27:43.586"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:44.086" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:27:43.586" endtime="20231215 19:27:44.086"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:27:44.086" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231215 19:27:44.086" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231215 19:27:44.086" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231215 19:27:44.086" endtime="20231215 19:27:44.198"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:40.715" endtime="20231215 19:27:44.198"/>
+</kw>
+<kw name="Input Kata Kunci Pasal" library="klasifikasi">
+<arg>107</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Kata Kunci Pasal"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:44.198" endtime="20231215 19:27:44.413"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Kata Kunci Pasal"]</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:44.413" level="INFO">Typing text '107' into text field '//*[@placeholder="Kata Kunci Pasal"]'.</msg>
+<status status="PASS" starttime="20231215 19:27:44.413" endtime="20231215 19:27:44.762"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:44.198" endtime="20231215 19:27:44.762"/>
+</kw>
+<kw name="Click Btn Submit" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="el-button el-button--primary float-end"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:44.762" endtime="20231215 19:27:44.978"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="el-button el-button--primary float-end"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:44.978" level="INFO">Clicking button '//*[@class="el-button el-button--primary float-end"]'.</msg>
+<status status="PASS" starttime="20231215 19:27:44.978" endtime="20231215 19:27:45.528"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:48.529" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:27:45.528" endtime="20231215 19:27:48.529"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:44.762" endtime="20231215 19:27:48.529"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:27:51.529" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:27:48.529" endtime="20231215 19:27:51.529"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231215 19:27:51.736" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231215 19:27:51.529" endtime="20231215 19:27:51.736"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231215 19:27:51.736" endtime="20231215 19:27:53.884"/>
+</kw>
+<doc>SC01 - View Page Master Data</doc>
+<tag>TC02 - Search Master Data - Klasifikasi</tag>
+<status status="PASS" starttime="20231215 19:27:26.553" endtime="20231215 19:27:53.884"/>
+</test>
+<test id="s1-t3" name="TC03 - Filter Master Data - Klasifikasi" line="36">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231215 19:27:53.886" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231215 19:27:53.885" endtime="20231215 19:27:56.457"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231215 19:27:56.457" endtime="20231215 19:27:56.667"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231215 19:27:56.667" endtime="20231215 19:27:56.776"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231215 19:27:56.776" endtime="20231215 19:27:56.776"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:53.885" endtime="20231215 19:27:56.776"/>
+</kw>
+<kw name="Input Email" library="login">
+<arg>superadmin@gmail.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:27:56.776" endtime="20231215 19:27:57.006"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:57.006" level="INFO">Typing text 'superadmin@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231215 19:27:57.006" endtime="20231215 19:27:57.361"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:27:57.679" level="INFO">Content of text field 'email' is 'superadmin@gmail.com'.</msg>
+<status status="PASS" starttime="20231215 19:27:57.361" endtime="20231215 19:27:57.679"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:56.776" endtime="20231215 19:27:57.679"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Superadmin123*@#</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:27:57.679" endtime="20231215 19:27:57.902"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:57.902" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231215 19:27:57.902" endtime="20231215 19:27:58.247"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:27:58.564" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231215 19:27:58.247" endtime="20231215 19:27:58.564"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:57.679" endtime="20231215 19:27:58.564"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:58.564" endtime="20231215 19:27:58.779"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 19:27:58.779" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231215 19:27:58.779" endtime="20231215 19:27:59.314"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:swal2-html-container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:27:59.314" endtime="20231215 19:28:03.189"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>id:swal2-html-container</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:03.402" level="INFO">${text} = You have successfully logged in!</msg>
+<status status="PASS" starttime="20231215 19:28:03.189" endtime="20231215 19:28:03.402"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${text} == "You have successfully logged in!"'</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<arg>ELSE IF</arg>
+<arg>'${text} == "Gagal Login"'</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<arg>ELSE</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:28:03.403" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
+<msg timestamp="20231215 19:28:03.403" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231215 19:28:03.403" level="INFO">Releasing special key ENTER.</msg>
+<msg timestamp="20231215 19:28:03.509" level="INFO">Sending keys Wait Until Location Is</msg>
+<msg timestamp="20231215 19:28:03.728" level="INFO">Sending keys http://10.31.31.107/home</msg>
+<status status="PASS" starttime="20231215 19:28:03.402" endtime="20231215 19:28:03.842"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:03.402" endtime="20231215 19:28:03.842"/>
+</kw>
+<status status="PASS" starttime="20231215 19:27:58.564" endtime="20231215 19:28:03.842"/>
+</kw>
+<kw name="Move To Module Klasifikasi" library="klasifikasi">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231215 19:28:03.842" level="INFO">Opening url 'http://10.31.31.107/klasifikasi/master/klasifikasi/'</msg>
+<status status="PASS" starttime="20231215 19:28:03.842" endtime="20231215 19:28:04.056"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20231215 19:28:04.056" endtime="20231215 19:28:04.215"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:07.216" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:28:04.215" endtime="20231215 19:28:07.216"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:03.842" endtime="20231215 19:28:07.216"/>
+</kw>
+<kw name="Click Btn Filter" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="fs-4 fw-semibold mb-0 ms-4"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:07.216" endtime="20231215 19:28:07.431"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="fs-4 fw-semibold mb-0 ms-4"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:07.431" level="INFO">Clicking element '//*[@class="fs-4 fw-semibold mb-0 ms-4"]'.</msg>
+<status status="PASS" starttime="20231215 19:28:07.431" endtime="20231215 19:28:07.661"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:08.662" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231215 19:28:07.661" endtime="20231215 19:28:08.662"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:07.216" endtime="20231215 19:28:08.662"/>
+</kw>
+<kw name="Select Kolom" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Filter Kolom"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:08.662" endtime="20231215 19:28:08.875"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Filter Kolom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:08.875" level="INFO">Clicking element '//*[@placeholder="Filter Kolom"]'.</msg>
+<status status="PASS" starttime="20231215 19:28:08.875" endtime="20231215 19:28:09.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:09.608" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:28:09.108" endtime="20231215 19:28:09.608"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:28:09.608" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:28:09.608" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:28:09.608" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:28:09.608" endtime="20231215 19:28:09.714"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:10.214" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:28:09.714" endtime="20231215 19:28:10.214"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:28:10.214" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:28:10.214" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:28:10.214" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:28:10.214" endtime="20231215 19:28:10.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:10.821" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:28:10.320" endtime="20231215 19:28:10.821"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:28:10.821" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:28:10.821" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:28:10.821" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:28:10.821" endtime="20231215 19:28:10.927"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:11.427" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:28:10.927" endtime="20231215 19:28:11.427"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:28:11.427" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231215 19:28:11.427" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231215 19:28:11.427" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231215 19:28:11.427" endtime="20231215 19:28:11.533"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:12.033" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231215 19:28:11.533" endtime="20231215 19:28:12.033"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:28:12.033" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231215 19:28:12.033" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231215 19:28:12.033" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231215 19:28:12.033" endtime="20231215 19:28:12.145"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:08.662" endtime="20231215 19:28:12.145"/>
+</kw>
+<kw name="Input Kata Kunci Pasal" library="klasifikasi">
+<arg>108</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Kata Kunci Pasal"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:12.145" endtime="20231215 19:28:12.361"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Kata Kunci Pasal"]</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:12.361" level="INFO">Typing text '108' into text field '//*[@placeholder="Kata Kunci Pasal"]'.</msg>
+<status status="PASS" starttime="20231215 19:28:12.361" endtime="20231215 19:28:12.706"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:12.145" endtime="20231215 19:28:12.706"/>
+</kw>
+<kw name="Click Btn Submit" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="el-button el-button--primary float-end"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:12.706" endtime="20231215 19:28:12.922"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="el-button el-button--primary float-end"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:12.922" level="INFO">Clicking button '//*[@class="el-button el-button--primary float-end"]'.</msg>
+<status status="PASS" starttime="20231215 19:28:12.922" endtime="20231215 19:28:13.467"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:16.467" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:28:13.467" endtime="20231215 19:28:16.467"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:12.706" endtime="20231215 19:28:16.467"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:19.467" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:28:16.467" endtime="20231215 19:28:19.467"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231215 19:28:19.673" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231215 19:28:19.467" endtime="20231215 19:28:19.673"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231215 19:28:19.673" endtime="20231215 19:28:21.813"/>
+</kw>
+<doc>SC01 - View Page Master Data</doc>
+<tag>TC03 - Filter Master Data - Klasifikasi</tag>
+<status status="PASS" starttime="20231215 19:27:53.885" endtime="20231215 19:28:21.813"/>
+</test>
+<test id="s1-t4" name="TC04 - View Detail Master Data - Klasifikasi" line="52">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231215 19:28:21.814" level="INFO">Opening browser 'Chrome' to base url 'http://10.31.31.107/sign-in'.</msg>
+<status status="PASS" starttime="20231215 19:28:21.814" endtime="20231215 19:28:25.088"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231215 19:28:25.088" endtime="20231215 19:28:25.394"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231215 19:28:25.394" endtime="20231215 19:28:25.503"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231215 19:28:25.503" endtime="20231215 19:28:25.503"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:21.814" endtime="20231215 19:28:25.503"/>
+</kw>
+<kw name="Input Email" library="login">
+<arg>superadmin@gmail.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>email</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:28:25.503" endtime="20231215 19:28:25.732"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:25.732" level="INFO">Typing text 'superadmin@gmail.com' into text field 'email'.</msg>
+<status status="PASS" starttime="20231215 19:28:25.732" endtime="20231215 19:28:26.089"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>email</arg>
+<arg>${email}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:28:26.407" level="INFO">Content of text field 'email' is 'superadmin@gmail.com'.</msg>
+<status status="PASS" starttime="20231215 19:28:26.089" endtime="20231215 19:28:26.407"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:25.503" endtime="20231215 19:28:26.407"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Superadmin123*@#</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231215 19:28:26.407" endtime="20231215 19:28:26.630"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:26.630" level="INFO">Typing text 'Superadmin123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231215 19:28:26.630" endtime="20231215 19:28:26.976"/>
+</kw>
+<kw name="Textfield Value Should Be" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<msg timestamp="20231215 19:28:27.297" level="INFO">Content of text field 'password' is 'Superadmin123*@#'.</msg>
+<status status="PASS" starttime="20231215 19:28:26.976" endtime="20231215 19:28:27.297"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:26.407" endtime="20231215 19:28:27.297"/>
+</kw>
+<kw name="Click Btn Login" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:27.297" endtime="20231215 19:28:27.514"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:27.514" level="INFO">Clicking button 'id:kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231215 19:28:27.514" endtime="20231215 19:28:28.052"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:swal2-html-container</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:28.052" endtime="20231215 19:28:31.318"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>id:swal2-html-container</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:31.531" level="INFO">${text} = You have successfully logged in!</msg>
+<status status="PASS" starttime="20231215 19:28:31.318" endtime="20231215 19:28:31.531"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${text} == "You have successfully logged in!"'</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<arg>ELSE IF</arg>
+<arg>'${text} == "Gagal Login"'</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<arg>ELSE</arg>
+<arg>Wait Until Element Contains</arg>
+<arg>id:swal2-html-container</arg>
+<arg>Gagal Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<arg>Wait Until Location Is</arg>
+<arg>http://10.31.31.107/home</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231215 19:28:31.532" level="INFO">Sending key(s) ('ENTER', 'Wait Until Location Is', 'http://10.31.31.107/home') to page.</msg>
+<msg timestamp="20231215 19:28:31.532" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231215 19:28:31.532" level="INFO">Releasing special key ENTER.</msg>
+<msg timestamp="20231215 19:28:31.638" level="INFO">Sending keys Wait Until Location Is</msg>
+<msg timestamp="20231215 19:28:31.860" level="INFO">Sending keys http://10.31.31.107/home</msg>
+<status status="PASS" starttime="20231215 19:28:31.531" endtime="20231215 19:28:31.979"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:31.531" endtime="20231215 19:28:31.979"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:27.297" endtime="20231215 19:28:31.979"/>
+</kw>
+<kw name="Move To Module Klasifikasi" library="klasifikasi">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231215 19:28:31.979" level="INFO">Opening url 'http://10.31.31.107/klasifikasi/master/klasifikasi/'</msg>
+<status status="PASS" starttime="20231215 19:28:31.979" endtime="20231215 19:28:32.226"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>http://10.31.31.107/klasifikasi/master/klasifikasi/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20231215 19:28:32.226" endtime="20231215 19:28:32.395"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:35.395" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:28:32.395" endtime="20231215 19:28:35.395"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:31.979" endtime="20231215 19:28:35.395"/>
+</kw>
+<kw name="Detail" library="klasifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="ki-solid ki-eye fs-8"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:35.395" endtime="20231215 19:28:35.610"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="ki-solid ki-eye fs-8"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231215 19:28:35.610" level="INFO">Clicking element '//*[@class="ki-solid ki-eye fs-8"]'.</msg>
+<status status="PASS" starttime="20231215 19:28:35.610" endtime="20231215 19:28:35.839"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="p-0 m-0"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231215 19:28:35.839" endtime="20231215 19:28:36.067"/>
+</kw>
+<status status="PASS" starttime="20231215 19:28:35.395" endtime="20231215 19:28:36.067"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231215 19:28:39.068" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231215 19:28:36.067" endtime="20231215 19:28:39.068"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231215 19:28:39.272" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231215 19:28:39.068" endtime="20231215 19:28:39.272"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231215 19:28:39.272" endtime="20231215 19:28:41.415"/>
+</kw>
+<doc>SC01 - View Page Master Data</doc>
+<tag>TC04 - View Detail Master Data - Klasifikasi</tag>
+<status status="PASS" starttime="20231215 19:28:21.814" endtime="20231215 19:28:41.415"/>
+</test>
+<doc>SC01 - View Page Master Data</doc>
+<status status="PASS" starttime="20231215 19:27:07.236" endtime="20231215 19:28:41.416"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Master Data - Klasifikasi</stat>
+<stat pass="1" fail="0" skip="0">TC02 - Search Master Data - Klasifikasi</stat>
+<stat pass="1" fail="0" skip="0">TC03 - Filter Master Data - Klasifikasi</stat>
+<stat pass="1" fail="0" skip="0">TC04 - View Detail Master Data - Klasifikasi</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="SC01 - View Page Master Data - Klasifikasi">SC01 - View Page Master Data - Klasifikasi</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

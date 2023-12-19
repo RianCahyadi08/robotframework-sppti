@@ -14,16 +14,25 @@ Click Btn Filter
 Select Kolom
     Wait Until Element Is Visible    //*[@placeholder="Filter Kolom"]
     Click Element    //*[@placeholder="Filter Kolom"]
-    Sleep    1s
+    Sleep    0.5s
+    Press Keys      None    ARROW_DOWN
+    Sleep    0.5s
+    Press Keys      None    ARROW_DOWN
+    Sleep    0.5s
+    Press Keys      None    ARROW_DOWN
+    Sleep    0.5s
+    Press Keys      None    ARROW_DOWN
+    Sleep    0.5s
+    Press Keys      None    ENTER
 
-Input Kata Kunci
-    Wait Until Element Is Visible    //*[@placeholder="Kata Kunci "]
+Input Kata Kunci Pasal
+    Wait Until Element Is Visible    //*[@placeholder="Kata Kunci Pasal"]
     [Arguments]     ${param}
-    Input Text    //*[@placeholder="Kata Kunci "]    ${param}
+    Input Text    //*[@placeholder="Kata Kunci Pasal"]    ${param}
 
 Click Btn Submit
-    Wait Until Element Is Visible    //*[@class="el-button el-button--primary float-end"]
-    Click Button    //*[@class="el-button el-button--primary float-end"]
+    Wait Until Element Is Visible    //*[@class="el-button el-button--primary ms-3"]
+    Click Button    //*[@class="el-button el-button--primary ms-3"]
     Sleep    3s
 
 Detail
@@ -49,10 +58,10 @@ Input Buku
     Input Text    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input    ${param}
 
 Input Bab
-    Wait Until Element Is Visible    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input
-    Clear Element Text    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input
+    Wait Until Element Is Visible    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[2]/div/div/div/input
+    Clear Element Text    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[2]/div/div/div/input
     [Arguments]     ${param}
-    Input Text    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[1]/div/div/div/input    ${param}
+    Input Text    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[2]/div/div/div/input    ${param}
 
 Input Pasal
     Wait Until Element Is Visible    xpath:/html/body/div[1]/div[1]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]/form/div[3]/div/div/div/input
